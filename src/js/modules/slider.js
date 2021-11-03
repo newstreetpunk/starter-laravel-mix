@@ -1,6 +1,6 @@
-import Swiper, {Lazy, Pagination, Navigation} from 'swiper';
+import Swiper, {Lazy, Pagination, Navigation, Controller, EffectFade} from 'swiper';
 
-Swiper.use([Lazy, Pagination, Navigation]);
+Swiper.use([Lazy, Pagination, Navigation, Controller, EffectFade]);
 
 const bannerImageSlider = new Swiper('.banner-image-slider', {
 	loop: true,
@@ -8,6 +8,15 @@ const bannerImageSlider = new Swiper('.banner-image-slider', {
 	preloadImages: false,
 	lazy: true,
 	autoHeight: true,
+	effect: 'fade',
+	fadeEffect: {
+		crossFade: true
+	},
+});
+
+const bannerTextSlider = new Swiper('.banner-text-slider', {
+	loop: true,
+	speed: 1800,
 	pagination: {
 		el: '.swiper-pagination',
 		type: 'bullets', //'bullets' | 'fraction' | 'progressbar' | 'custom'
@@ -18,3 +27,5 @@ const bannerImageSlider = new Swiper('.banner-image-slider', {
 		prevEl: '.swiper-button-prev',
 	},
 });
+
+bannerTextSlider.controller.control = bannerImageSlider;
