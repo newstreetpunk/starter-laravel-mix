@@ -1,5 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
 	mode: 'jit',
@@ -16,6 +17,7 @@ module.exports = {
 		colors: {
 			mainBlue: '#002C5F',
 			secondBlue: '#00AAD2',
+			sand: '#E4DCD3',
 			transparent: 'transparent',
 			current: 'currentColor',
 			black: colors.black,
@@ -31,10 +33,4 @@ module.exports = {
 			},
 		},
 	},
-
-	variants: {
-		extend: {},
-	},
-	
-	plugins: [],
 }

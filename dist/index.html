@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="h-full">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -9,20 +9,18 @@
 
 	<link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="h-full">
+<body>
 
-	<div class="body-wrapper flex flex-col h-full">
-
-		<header class="header sticky top-0 w-full border-b font-bold text-3xl bg-gray-200 flex-center flex-shrink-0 z-50" id="header">
+		<header class="header sticky top-0 w-full border-b font-bold text-3xl bg-gray-200 flex-center flex-shrink-0 z-50 shadow-md" id="header">
 			Sticky Header
 		</header>
 
-		<main class="flex-grow">
+		<main>
 			
-			<section class="banner md:h-full overflow-hidden" id="banner">
-				<div class="banner-wrapper flex flex-col md:flex-row">
+			<section class="banner md:h-full" id="banner">
+				<div class="banner-wrapper flex flex-col lg:flex-row">
 					
-					<div class="banner-sliders w-full md:w-3/4 md:h-full relative">
+					<div class="banner-sliders lg:w-3/4 relative">
 
 						<div class="banner-image-slider swiper md:h-full z-10">
 							<div class="swiper-wrapper md:h-full">
@@ -52,7 +50,7 @@
 
 						</div>
 
-						<div class="banner-text-slider swiper !absolute top-5 bottom-5 md:top-10 md:bottom-10 left-0 w-full z-20">
+						<div class="banner-text-slider swiper !absolute top-5 bottom-5 md:top-14 md:bottom-14 left-0 w-full z-20">
 							<div class="swiper-wrapper">
 								
 								<a href="/" class="banner-text-slide swiper-slide text-white">
@@ -95,12 +93,71 @@
 
 					</div>
 
-					<div class="banner-form bg-white w-full md:w-1/4 min-w-[400px] p-5">
-						123
+					<div class="banner-form bg-white lg:w-1/4 mt-8 lg:mt-0 flex flex-wrap justify-between lg:justify-center lg:flex-col shadow-2xl px-5 mx-5 md:mx-0 md:px-10 lg:px-6 py-8 lg:py-3">
+
+						<div class="w-full md:w-[33%] lg:w-full">
+							<h2 class="text-xl md:text-2xl font-bold mb-2">Заголовок формы</h2>
+							<p class=" text-base md:text-lg">Подзаголовок формы, если нужен в 2 строки</p>
+						</div>
+
+						<form class="w-full md:w-[63%] lg:w-full mt-5 md:mt-0 lg:mt-5 flex flex-wrap justify-between lg:justify-start lg:flex-col">
+
+							<div class="w-full md:w-[48%] lg:w-full">
+								<label class="form-group block text-base font-bold mb-3">
+									Имя
+									<input type="text" class="text-base px-5 py-3 border border-sand block rounded-0 outline-none w-full mt-2 duration-300 placeholder-gray-600::placeholder focus:shadow-2xl" placeholder="Ваше имя" required>
+								</label>
+								<label class="form-group block text-base font-bold mb-3">
+									Телефон
+									<input type="text" class="text-base px-5 py-3 border border-sand block rounded-0 outline-none w-full mt-2 duration-300 placeholder-gray-600::placeholder focus:shadow-2xl" placeholder="+7 (999) 123-45-67" required>
+								</label>
+							</div>
+
+							<div class="w-full md:w-[48%] lg:w-full">
+								<label class="form-group block text-xs md:text-sm mt-3">
+									<input type="checkbox" checked required>
+									Согласен на <a href="#" class="underline transition-all duration-700 hover:no-underline">обработку персональных данных</a> 
+								</label>
+								<button class="text-base text-white font-bold px-5 py-4 border border-transparent block rounded-0 outline-none w-full mt-7 duration-500 bg-mainBlue hover:bg-opacity-95">Отправить</button>
+							</div>
+
+						</form>
+						
 					</div>
 
 				</div>
 			</section>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
 
 		</main>
 
@@ -109,7 +166,6 @@
 				Footer
 			</div>
 		</footer>
-	</div>
 
 	<script src="js/scripts.js"></script>
 </body>
