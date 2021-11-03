@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru" class="h-full">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Simple starter using Laravel mix</title>
+
+	<link rel="icon" href="img/favicon.png">
+
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="h-full">
+
+	<div class="body-wrapper flex flex-col h-full">
+
+		<header class="header sticky top-0 w-full border-b font-bold text-3xl bg-gray-200 flex-center flex-shrink-0 z-50" id="header">
+			Sticky Header
+		</header>
+
+		<main class="flex-grow">
+			
+			<section class="banner bg-gray-100 h-full overflow-hidden" id="banner">
+				<div class="banner-wrapper flex flex-col md:flex-row h-full">
+					
+					<div class="banner-sliders w-full md:w-3/4 h-full">
+
+						<div class="banner-image-slider swiper h-full">
+							<div class="swiper-wrapper h-full">
+
+								<div class="banner-image-slide swiper-slide h-full">
+									<video loop muted autoplay preload="metadata" poster="https://img.youtube.com/vi/w4oJr0arExA/maxresdefault.jpg" class="w-full h-auto max-h-[100%]">
+										<source type="video/mp4" src="https://promo.kia-samara.ru/img/bg/K5_1080p.mp4">
+									</video>								
+								</div>
+
+								<div class="banner-image-slide swiper-slide h-full w-full">
+									<div class="banner-image-slide-bg h-full bg-cover bg-center swiper-lazy" data-background="img/slider/1.jpg">
+										<div class="swiper-lazy-preloader"></div>
+									</div>
+								</div>
+
+								<div class="banner-image-slide swiper-slide h-full w-full">
+									<picture>
+										<source media="(max-width: 768px)" data-srcset="img/slider/2-1.jpg" class="swiper-lazy">
+										<source media="(min-width: 768px)" data-srcset="img/slider/2.jpg" class="swiper-lazy">
+										<img data-src="img/slider/2.jpg" class="h-full w-full object-cover object-center swiper-lazy" />
+									</picture>
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+
+							</div>
+
+							<!-- If we need pagination -->
+							<div class="swiper-pagination"></div>
+
+							<!-- If we need navigation buttons -->
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+
+						</div>
+
+					</div>
+
+					<div class="banner-form bg-white w-full md:w-1/4 min-w-[400px] p-5">
+						123
+					</div>
+
+				</div>
+			</section>
+
+		</main>
+
+		<footer class="footer bg-gray-800 text-white text-opacity-80 font-bold text-3xl text-center py-20 flex-shrink-0" id="footer">
+			<div class="container">
+				Footer
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/scripts.js"></script>
+</body>
+</html>
