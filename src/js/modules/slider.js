@@ -7,7 +7,7 @@ const bannerImageSlider = new Swiper('.banner-image-slider', {
 	speed: 1200,
 	preloadImages: false,
 	lazy: true,
-	autoHeight: true,
+	// autoHeight: true,
 	effect: 'fade',
 	fadeEffect: {
 		crossFade: true

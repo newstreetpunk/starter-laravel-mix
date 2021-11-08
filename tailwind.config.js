@@ -29,7 +29,7 @@ module.exports = {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['raleway-st', ...defaultTheme.fontFamily.sans],
+				sans: ['open-sans-st', ...defaultTheme.fontFamily.sans],
 			},
 		},
 	},
