@@ -5,7 +5,7 @@ Swiper.use([Lazy, Pagination, Navigation, Controller, EffectFade]);
 const bannerImageSlider = new Swiper('.banner-image-slider', {
 	loop: true,
 	speed: 1200,
-	preloadImages: false,
+	preloadImages: true,
 	lazy: true,
 	// autoHeight: true,
 	effect: 'fade',
@@ -18,6 +18,10 @@ const bannerTextSlider = new Swiper('.banner-text-slider', {
 	loop: true,
 	speed: 1200,
 	pagination: true,
+	effect: 'fade',
+	fadeEffect: {
+		crossFade: true
+	},
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',

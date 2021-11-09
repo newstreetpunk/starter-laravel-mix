@@ -3,8 +3,18 @@
 	// height: calc(100vh - $headerHeight);
 }
 
-.banner-image-slider{
-	// height: 400px;
+.banner-text-slide{
+	.note{
+		transform: translateX(-100%);
+		opacity: 0;
+		transition: transform .8s ease;
+	}
+	&.swiper-slide-active{
+		.note{
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
 }
 
 .banner-image-slide{
