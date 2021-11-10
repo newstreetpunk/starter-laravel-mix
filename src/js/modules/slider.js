@@ -12,8 +12,7 @@ const initSlider = (num = 0, loop) => {
 		speed: 1000,
 		preloadImages: false,
 		lazy: true,
-		// initialSlide: num,
-		// autoHeight: true,
+		initialSlide: num,
 		effect: 'fade',
 		fadeEffect: {
 			crossFade: true 
