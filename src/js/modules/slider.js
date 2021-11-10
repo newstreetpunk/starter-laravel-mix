@@ -20,6 +20,23 @@ const initImageSlider = (num = 0) => {
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets', //'bullets' | 'fraction' | 'progressbar' | 'custom'
+			clickable: true,
+		},
+		breakpoints: {
+			320: {
+				pagination: false
+			},
+			580: {
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets', //'bullets' | 'fraction' | 'progressbar' | 'custom'
+					clickable: true,
+				},
+			},
 		}
 	})
 }
