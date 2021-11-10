@@ -1,17 +1,18 @@
-import Swiper, {Lazy, Pagination, Navigation, Controller, EffectFade} from 'swiper';
+import Swiper, {Lazy, Pagination, Navigation, EffectFade} from 'swiper';
 
-Swiper.use([Lazy, Pagination, Navigation, Controller, EffectFade]);
+Swiper.use([Lazy, Pagination, Navigation, EffectFade]);
 
-let bannerImageSlider;
-let bannerTextSlider;
+let bannerSlider;
+let loop = false;
 
-const initImageSlider = (num = 0) => {
-	bannerImageSlider = new Swiper('.banner-image-slider', {
-		loop: true,
-		speed: 600,
-		preloadImages: true,
+const initSlider = (num = 0, loop) => {
+	bannerSlider = new Swiper('.banner-slider', {
+		loop: loop,
+		slidesPerView: 1,
+		speed: 1000,
+		preloadImages: false,
 		lazy: true,
-		initialSlide: num,
+		// initialSlide: num,
 		// autoHeight: true,
 		effect: 'fade',
 		fadeEffect: {
@@ -41,30 +42,8 @@ const initImageSlider = (num = 0) => {
 	})
 }
 
-const initTextSlider = (num = 0) => {
-	bannerTextSlider = new Swiper('.banner-text-slider', {
-	loop: true,
-	speed: 1200,
-	pagination: true,
-	initialSlide: num,
-	effect: 'fade',
-	fadeEffect: {
-		crossFade: true
-		},
-	})
-}
+const slides = document.querySelectorAll('.banner-slide');
 
-function control() {
-	bannerImageSlider.controller.control = bannerTextSlider;
-}
+if (slides.length > 1) loop = true;
 
-initImageSlider();
-initTextSlider();
-control();
-
-// window.addEventListener("orientationchange", function() {
-// 	let numImage = bannerImageSlider.activeIndex;
-// 	console.log(numImage)
-// 	bannerImageSlider.destroy();
-// 	initImageSlider(numImage - 1);
-// }, false);
+initSlider(0, loop);

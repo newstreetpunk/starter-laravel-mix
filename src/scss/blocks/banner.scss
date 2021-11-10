@@ -1,34 +1,19 @@
-.banner{
-	// min-height: 500px;
-	// height: calc(100vh - $headerHeight);
-}
-
-.banner-text-slide{
-	.note{
-		transform: translateX(-100%);
-		opacity: 0;
-		transition: transform .8s ease;
-	}
-	&.swiper-slide-active{
-		.note{
-			transform: translateX(0);
-			opacity: 1;
-		}
-	}
-}
-
-.banner-image-slide{
+.banner-slide{
 	position: relative;
 	padding-bottom: 56.25%;
 	visibility: hidden;
 	&.swiper-slide-active{
 		visibility: visible;
+		.note{
+			transform: translateX(0);
+			opacity: 1;
+		}
 	}
 	@media (max-width: 768px) and (min-height: 600px) {
 		padding-bottom: 100%;
 	}
 	@media (max-width: 567px){
-		padding-bottom: 120%;
+		padding-bottom: 110%;
 	}
 	&:after{
 		content: '';
@@ -38,6 +23,11 @@
 		left: 0;
 		top: 0;
 		background-color: rgba(#000, .3);
+	}
+	.note{
+		transform: translateX(-100%);
+		opacity: 0;
+		transition: transform .8s ease;
 	}
 	picture, img, video, .banner-image-slide-bg{
 		object-fit: cover;

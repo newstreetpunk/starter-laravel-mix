@@ -1,6 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
-const plugin = require('tailwindcss/plugin');
 
 module.exports = {
 	mode: 'jit',
@@ -29,7 +28,7 @@ module.exports = {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['open-sans-st', ...defaultTheme.fontFamily.sans],
+				sans: ['hyunday-st', ...defaultTheme.fontFamily.sans],
 			},
 		},
 	},
