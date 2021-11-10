@@ -2,42 +2,52 @@ import Swiper, {Lazy, Pagination, Navigation, Controller, EffectFade} from 'swip
 
 Swiper.use([Lazy, Pagination, Navigation, Controller, EffectFade]);
 
-const bannerImageSlider = new Swiper('.banner-image-slider', {
-	loop: true,
-	speed: 1200,
-	preloadImages: true,
-	lazy: true,
-	// autoHeight: true,
-	effect: 'fade',
-	fadeEffect: {
-		crossFade: true
-	},
-});
+let bannerImageSlider;
+let bannerTextSlider;
 
-const bannerTextSlider = new Swiper('.banner-text-slider', {
+const initImageSlider = (num = 0) => {
+	bannerImageSlider = new Swiper('.banner-image-slider', {
+		loop: true,
+		speed: 600,
+		preloadImages: true,
+		lazy: true,
+		initialSlide: num,
+		// autoHeight: true,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true 
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		}
+	})
+}
+
+const initTextSlider = (num = 0) => {
+	bannerTextSlider = new Swiper('.banner-text-slider', {
 	loop: true,
 	speed: 1200,
 	pagination: true,
+	initialSlide: num,
 	effect: 'fade',
 	fadeEffect: {
 		crossFade: true
-	},
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	breakpoints: {
-		320: {
-			pagination: false
 		},
-		580: {
-			pagination: {
-				el: '.swiper-pagination',
-				type: 'bullets', //'bullets' | 'fraction' | 'progressbar' | 'custom'
-				clickable: true,
-			},
-		},
-	}
-});
+	})
+}
 
-bannerTextSlider.controller.control = bannerImageSlider;
+function control() {
+	bannerImageSlider.controller.control = bannerTextSlider;
+}
+
+initImageSlider();
+initTextSlider();
+control();
+
+// window.addEventListener("orientationchange", function() {
+// 	let numImage = bannerImageSlider.activeIndex;
+// 	console.log(numImage)
+// 	bannerImageSlider.destroy();
+// 	initImageSlider(numImage - 1);
+// }, false);

@@ -20,12 +20,15 @@
 .banner-image-slide{
 	position: relative;
 	padding-bottom: 56.25%;
-
-	@media (max-width: 768px) {
+	visibility: hidden;
+	&.swiper-slide-active{
+		visibility: visible;
+	}
+	@media (max-width: 768px) and (min-height: 600px) {
 		padding-bottom: 100%;
 	}
-	@media (max-width: 550px) {
-		padding-bottom: 130%;
+	@media (max-width: 567px) and (min-height: 320px){
+		padding-bottom: 100%;
 	}
 	&:after{
 		content: '';
