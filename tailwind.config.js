@@ -2,12 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-	mode: 'jit',
-
-	purge: ['./dist/**/*.html'],
-
-	darkMode: false, // or 'media' or 'class'
-
+	content: ['./dist/**/*.html'],
 	theme: {
 		container: {
 			center: true,
@@ -19,12 +14,15 @@ module.exports = {
 			sand: '#E4DCD3',
 			transparent: 'transparent',
 			current: 'currentColor',
+			blue: colors.blue,
 			black: colors.black,
 			white: colors.white,
-			gray: colors.trueGray,
+			gray: colors.neutral,
 			indigo: colors.indigo,
 			red: colors.rose,
+			green: colors.emerald,
 			yellow: colors.amber,
+			purple: colors.violet,
 		},
 		extend: {
 			fontFamily: {
